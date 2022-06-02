@@ -1,13 +1,16 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
-import styles from './routes.module.scss'
+import { useRecoilValue } from 'recoil'
+import { isLoggedState } from 'states/login'
 
 import Main from './Main'
 import Login from './Login'
 import SignUp from './SignUp'
 import SuccessSignUp from './SignUp/SuccessSignUp'
 
+import styles from './routes.module.scss'
+
 const App = () => {
-  const isLoggedIn = false
+  const isLoggedIn = useRecoilValue(isLoggedState)
 
   return (
     <div className={styles.app}>

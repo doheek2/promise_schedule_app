@@ -1,12 +1,18 @@
 import MobileWrapper from 'components/MobileWrapper'
+import Calendar from './Calendar'
 import styles from './main.module.scss'
 
 const Main = () => {
   return (
     <MobileWrapper>
-      <div>
-        <p>Main</p>
-      </div>
+      <section>
+        <Calendar />
+        <div className={styles.footer}>
+          <button type='button' className={styles.addBtn}>
+            +
+          </button>
+        </div>
+      </section>
     </MobileWrapper>
   )
 }

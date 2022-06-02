@@ -1,22 +1,26 @@
 import { signInWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth'
 import { auth } from 'services/firebase'
 
-import { FormEvent, useState } from 'react'
+import { useSetRecoilState } from 'recoil'
 import { NavLink, useNavigate } from 'react-router-dom'
-import styles from './login.module.scss'
+import { FormEvent, useState } from 'react'
+import { isLoggedState } from 'states/login'
 
 import MobileWrapper from 'components/MobileWrapper'
 import Form from 'components/Form'
+import styles from './login.module.scss'
 
 const Login = () => {
   const navigate = useNavigate()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const setIsLoggedIn = useSetRecoilState(isLoggedState)
 
   const loginSubmitHandler = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     const result = signInWithEmailAndPassword(auth, email, password)
     console.log(result)
+    setIsLoggedIn(true)
     navigate('/')
 
     onAuthStateChanged(auth, (user) => {

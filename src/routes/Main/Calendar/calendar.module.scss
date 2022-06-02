@@ -1,0 +1,56 @@
+@use 'src/styles/constants/colors';
+
+.calendarWrapper {
+  width: 280px;
+  height: 400px;
+
+  .title {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+    .prevBtn {
+      margin-right: 10px;
+    }
+
+    .nextBtn {
+      margin-left: 10px;
+    }
+  }
+
+  .week {
+    display: flex;
+    justify-content: space-evenly;
+    width: 280px;
+    margin-top: 20px;
+    font-size: 15px;
+    color: colors.$GRAY2;
+  }
+
+  .date {
+    margin-top: 20px;
+
+    .weekday {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      float: left;
+      width: 40px;
+      height: 40px;
+      margin-bottom: 10px;
+      font-size: 17px;
+      line-height: 50px;
+      color: colors.$GRAY3;
+    }
+
+    .sunday {
+      color: colors.$RED;
+    }
+
+    .today {
+      color: colors.$WHITE;
+      background-color: colors.$GREEN1;
+      border-radius: 50%;
+    }
+  }
+}
