@@ -1,0 +1,13 @@
+@use 'src/styles/constants/colors';
+
+.closeBtnWrapper {
+  display: flex;
+  justify-content: end;
+  width: 280px;
+
+  .closeBtn {
+    width: 28px;
+    height: 28px;
+    color: colors.$GRAY3;
+  }
+}

@@ -1,0 +1,40 @@
+@use 'src/styles/constants/colors';
+
+.successSignUpWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 280px;
+  height: 500px;
+
+  h3 {
+    font-size: 23px;
+    font-weight: 800;
+    color: colors.$GREEN1;
+  }
+
+  svg {
+    width: 140px;
+    height: 140px;
+    margin: 30px 0;
+    color: colors.$GREEN2;
+  }
+
+  p {
+    margin-top: 10px;
+    font-size: 15px;
+    color: colors.$BLACK;
+    text-align: center;
+  }
+
+  button {
+    width: 280px;
+    height: 50px;
+    margin-top: 35px;
+    font-size: 15px;
+    color: colors.$WHITE;
+    background-color: colors.$GREEN1;
+    border-radius: 15px;
+  }
+}

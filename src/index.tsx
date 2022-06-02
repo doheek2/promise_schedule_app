@@ -1,7 +1,7 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { BrowserRouter } from 'react-router-dom'
 import { RecoilRoot } from 'recoil'
+import { BrowserRouter } from 'react-router-dom'
+import ReactDOM from 'react-dom/client'
+import React from 'react'
 
 import reportWebVitals from './reportWebVitals'
 import './styles/index.scss'

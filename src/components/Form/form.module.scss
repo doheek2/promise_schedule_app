@@ -1,0 +1,53 @@
+@use 'src/styles/constants/colors';
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 280px;
+  height: 300px;
+
+  input {
+    width: 280px;
+    height: 50px;
+    font-size: 16px;
+    color: colors.$GRAY2;
+    text-indent: 20px;
+    background-color: colors.$INPUT;
+    border-radius: 15px;
+
+    &::placeholder {
+      font-size: 16px;
+      color: colors.$GRAY2;
+      text-indent: 20px;
+    }
+
+    &:focus {
+      border: 2px solid colors.$GREEN1;
+    }
+  }
+
+  .validateText {
+    width: 280px;
+    padding-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 13px;
+    color: colors.$RED;
+  }
+
+  button {
+    width: 280px;
+    height: 50px;
+    margin-top: 35px;
+    font-size: 15px;
+    color: colors.$WHITE;
+    background-color: colors.$GREEN1;
+    border-radius: 15px;
+  }
+
+  .disabled {
+    background-color: colors.$GRAY2;
+  }
+}

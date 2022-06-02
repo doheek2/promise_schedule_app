@@ -1,9 +1,6 @@
 @use 'src/styles/constants/colors';
-@use 'src/styles/mixins/flexbox';
-@use 'src/styles/mixins/visual';
-@use 'src/styles/mixins/responsive';
 
-.loginWrapper {
+.signUpWrapper {
   h3 {
     margin-top: 50px;
     font-size: 23px;
@@ -11,22 +8,17 @@
     color: colors.$GREEN1;
   }
 
-  .loginText {
+  .signUpText {
     margin-top: 10px;
     font-size: 13px;
     color: colors.$GRAY1;
   }
 
-  .signUpTextWrapper {
+  .text {
     display: flex;
     justify-content: center;
     width: 280px;
-
-    .signUpText {
-      margin-top: 10px;
-      margin-left: 5px;
-      font-size: 13px;
-      color: colors.$GREEN1;
-    }
+    font-size: 14px;
+    color: colors.$GREEN1;
   }
 }
