@@ -1,0 +1,54 @@
+@use 'src/styles/constants/colors';
+
+.newScheduleWrapper {
+  width: 280px;
+  height: 640px;
+
+  .titleInput {
+    width: 280px;
+    margin-top: 30px;
+    font-size: 21px;
+    color: colors.$GRAY3;
+    text-indent: 5px;
+    border-bottom: 1px solid colors.$GRAY1;
+  }
+
+  .selectWrapper {
+    display: flex;
+    align-items: center;
+    width: 280px;
+    height: 35px;
+    margin-top: 15px;
+
+    .colorPicker {
+      display: flex;
+      justify-content: space-between;
+      width: 250px;
+      height: 30px;
+      margin-left: 10px;
+
+      .colorBtn {
+        width: 30px;
+        height: 30px;
+        background-color: colors.$GREEN1;
+        border-radius: 50%;
+      }
+
+      .selectBtn {
+        border: 3px solid colors.$GRAY2;
+      }
+    }
+
+    .locationWrapper {
+      width: 280px;
+      height: 100px;
+      margin-top: 30px;
+    }
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+    color: colors.$GREEN1;
+  }
+}

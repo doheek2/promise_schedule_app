@@ -1,4 +1,5 @@
 import MobileWrapper from 'components/MobileWrapper'
+import { NavLink } from 'react-router-dom'
 import Calendar from './Calendar'
 import styles from './main.module.scss'
 
@@ -8,9 +9,7 @@ const Main = () => {
       <section>
         <Calendar />
         <div className={styles.footer}>
-          <button type='button' className={styles.addBtn}>
-            +
-          </button>
+          <NavLink to='newSchedule'>+</NavLink>
         </div>
       </section>
     </MobileWrapper>

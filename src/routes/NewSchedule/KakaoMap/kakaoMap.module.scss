@@ -1,0 +1,35 @@
+@use 'src/styles/constants/colors';
+
+.maps {
+  width: 280px;
+  height: 350px;
+
+  .searchPlaceWrapper {
+    display: flex;
+    align-items: center;
+    width: 280px;
+    height: 35px;
+    margin-top: 15px;
+
+    input {
+      width: 250px;
+      height: 35px;
+      margin-left: 10px;
+      color: colors.$GRAY3;
+      text-indent: 15px;
+      background-color: colors.$WHITE;
+      border: 1px solid colors.$GRAY1;
+      border-radius: 20px;
+
+      &::placeholder {
+        color: colors.$GRAY2;
+      }
+    }
+  }
+
+  .mapWrapper {
+    width: 280px;
+    height: 280px;
+    margin-top: 15px;
+  }
+}

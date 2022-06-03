@@ -1,0 +1,62 @@
+@use 'src/styles/constants/colors';
+
+.selectWrapper {
+  display: flex;
+  align-items: center;
+  width: 280px;
+  height: 35px;
+  margin-top: 20px;
+
+  .datePickerInput {
+    width: 250px;
+    height: 35px;
+    margin-left: 10px;
+    color: colors.$GRAY2;
+    text-indent: 15px;
+    background-color: colors.$WHITE;
+    border: 1px solid colors.$GRAY1;
+    border-radius: 20px;
+  }
+
+  .datePickerHeader {
+    position: relative;
+    padding: 12px 0;
+    text-align: center;
+
+    .currentMonth {
+      font-size: 17px;
+      color: colors.$GRAY3;
+    }
+
+    .navigation {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    svg {
+      width: 15px;
+      height: 15px;
+      color: colors.$GRAY2;
+    }
+
+    .prevBtn {
+      left: 10px;
+    }
+
+    .nextBtn {
+      top: 12px;
+      right: 10px;
+    }
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+    color: colors.$GREEN1;
+  }
+}

@@ -4,7 +4,7 @@ import { auth } from 'services/firebase'
 import { useSetRecoilState } from 'recoil'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { FormEvent, useState } from 'react'
-import { isLoggedState } from 'states/login'
+import { isLoggedState } from 'states/recoil'
 
 import MobileWrapper from 'components/MobileWrapper'
 import Form from 'components/Form'
