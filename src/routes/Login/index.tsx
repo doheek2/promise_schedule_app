@@ -3,8 +3,8 @@ import { auth } from 'services/firebase'
 
 import { useSetRecoilState } from 'recoil'
 import { NavLink, useNavigate } from 'react-router-dom'
-import { FormEvent, useState } from 'react'
-import { isLoggedState } from 'states/recoil'
+import { FormEvent, useEffect, useState } from 'react'
+import { isLoggedState, userState } from 'states/recoil'
 
 import MobileWrapper from 'components/MobileWrapper'
 import Form from 'components/Form'
@@ -15,17 +15,24 @@ const Login = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const setIsLoggedIn = useSetRecoilState(isLoggedState)
+  const setUser = useSetRecoilState(userState)
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        const userId = user.email?.split('@')[0]
+        setUser(userId)
+      } else {
+        setUser('')
+      }
+    })
+  }, [setIsLoggedIn, setUser])
 
   const loginSubmitHandler = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    const result = signInWithEmailAndPassword(auth, email, password)
-    console.log(result)
-    setIsLoggedIn(true)
-    navigate('/')
-
-    onAuthStateChanged(auth, (user) => {
-      if (user) console.log(user)
-      else console.log('logout')
+    signInWithEmailAndPassword(auth, email, password).then(() => {
+      setIsLoggedIn(true)
+      navigate('/')
     })
   }
 

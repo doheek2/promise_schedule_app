@@ -1,0 +1,38 @@
+@use 'src/styles/constants/colors';
+
+.selectDataWrapper {
+  position: absolute;
+  top: 380px;
+  width: 280px;
+  height: 190px;
+  overflow-y: scroll;
+
+  .selectData {
+    width: 280px;
+    height: 80px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+
+    .data {
+      width: 240px;
+      height: 40px;
+      padding: 20px;
+
+      .scheduleNm {
+        font-size: 17px;
+        font-weight: 600;
+        color: colors.$BLACK;
+      }
+
+      .placeNm {
+        margin-top: 5px;
+        font-size: 15px;
+        color: colors.$BLACK;
+
+        svg {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}

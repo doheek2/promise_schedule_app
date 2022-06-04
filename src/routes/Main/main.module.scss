@@ -1,0 +1,32 @@
+@use 'src/styles/constants/colors';
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 360px;
+  height: 80px;
+  border-top: 1px solid colors.$GRAY1;
+  border-bottom-right-radius: 60px;
+  border-bottom-left-radius: 60px;
+
+  svg {
+    width: 35px;
+    height: 35px;
+    color: colors.$GREEN1;
+  }
+
+  .plusBtn {
+    width: 60px;
+    height: 60px;
+    color: colors.$GREEN1;
+  }
+
+  .logoutBtn {
+    margin-top: 3px;
+    color: colors.$GRAY1;
+  }
+}

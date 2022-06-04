@@ -17,9 +17,7 @@ const SignUp = () => {
   const signUpSubmitHandler = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        const { user } = userCredential
-        console.log(user.email)
+      .then(() => {
         navigate('/login')
       })
       .catch((error) => {

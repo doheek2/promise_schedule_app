@@ -1,6 +1,7 @@
 @use 'src/styles/constants/colors';
 
 .calendarWrapper {
+  position: relative;
   width: 280px;
   height: 400px;
 
@@ -9,8 +10,16 @@
     justify-content: center;
     margin-top: 20px;
 
-    .prevBtn {
-      margin-right: 10px;
+    .yearSelect {
+      width: 45px;
+    }
+
+    select {
+      text-align-last: center;
+      border: 0 none;
+      -webkit--appearance: none;
+      -moz-appearance: none;
+      appearance: none;
     }
 
     .nextBtn {
@@ -51,6 +60,12 @@
       color: colors.$WHITE;
       background-color: colors.$GREEN1;
       border-radius: 50%;
+    }
+
+    .clickedDate {
+      background-color: colors.$GRAY1;
+      border-radius: 50%;
+      opacity: 0.5;
     }
   }
 }

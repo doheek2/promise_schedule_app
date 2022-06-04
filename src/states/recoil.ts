@@ -5,15 +5,20 @@ export const isLoggedState = atom<boolean>({
   default: false,
 })
 
-// { name: 'pink', color: '#e09e85' },
+export const userState = atom<string | null | undefined>({
+  key: '#userState',
+  default: '',
+})
+
+// { name: 'red', color: '#ead6d6' },
+// { name: 'yellow', color: '#eae9d6' },
 // { name: 'green', color: '#c2dfdb' },
-// { name: 'mint', color: '#b4dedf' },
+// { name: 'sky', color: '#d6e6ea' },
 // { name: 'purple', color: '#f2ebfd' },
 // { name: 'beige', color: '#f5f0ea' },
 // { name: 'gray', color: '#c7c7cc' },
-// { name: 'black', color: '#2c2c2e' },
 
 export const colorsState = atom<string[]>({
   key: '#colorsState',
-  default: ['#e09e85', '#c2dfdb', '#b4dedf', '#f2ebfd', '#f5f0ea', '#c7c7cc', '#2c2c2e'],
+  default: ['#ead6d6', '#eae9d6', '#c2dfdb', '#d6e6ea', '#f2ebfd', '#f5f0ea', '#c7c7cc'],
 })

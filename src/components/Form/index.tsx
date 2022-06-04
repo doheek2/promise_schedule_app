@@ -42,7 +42,7 @@ const LoginForm = ({ email, setEmail, password, setPassword, buttonText, submitH
   }
 
   return (
-    <form onSubmit={submitHandler}>
+    <form className={styles.form} onSubmit={submitHandler}>
       <input
         type='text'
         placeholder='Email'
@@ -51,7 +51,7 @@ const LoginForm = ({ email, setEmail, password, setPassword, buttonText, submitH
         onBlur={validateEmailHandler}
       />
       <p className={styles.validateText}>{emailValidText}</p>
-      <input type='password' placeholder='Password' value={password} onChange={passwordChangeHandler} />
+      <input type='password' placeholder='Password' onChange={passwordChangeHandler} />
       {isButtonDisable && <button type='submit'>{buttonText}</button>}
       {!isButtonDisable && (
         <button type='submit' className={cx(styles.disabled)} disabled>

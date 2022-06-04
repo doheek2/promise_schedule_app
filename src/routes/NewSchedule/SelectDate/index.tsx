@@ -1,25 +1,36 @@
 import DatePicker from 'react-datepicker'
 import { MdArrowBackIos, MdArrowForwardIos } from 'react-icons/md'
 import { IoCalendarClear } from 'react-icons/io5'
-import { FocusEvent, useState } from 'react'
+import { Dispatch, FocusEvent, SetStateAction, useState } from 'react'
 import cx from 'classnames'
 import styles from './selectDate.module.scss'
 import './datepicker.css'
 
-const SelectDate = () => {
-  const [startDate, setStartDate] = useState<Date | null>(new Date())
+interface IProps {
+  setDate: Dispatch<SetStateAction<Date | null>>
+}
+
+const SelectDate = ({ setDate }: IProps) => {
+  const [selectedDate, setSelectedDate] = useState<Date | null>(new Date())
+
   const inputReadOnlyHandler = (e: FocusEvent<HTMLInputElement>) => e.preventDefault()
+
+  const dateChangeHandler = (date: Date | null) => {
+    setSelectedDate(date)
+    setDate(date)
+  }
 
   return (
     <div className={styles.selectWrapper}>
       <IoCalendarClear />
       <DatePicker
-        selected={startDate}
+        selected={selectedDate}
         className='datepicker'
         dateFormat='yy. MM. dd (eee)'
         disabledKeyboardNavigation
         onChangeRaw={inputReadOnlyHandler}
-        onChange={(date: Date | null) => setStartDate(date)}
+        onChange={dateChangeHandler}
+        // onChange={(date: Date | null) => setStartDate(date)}
         customInput={<input type='text' className={styles.datePickerInput} />}
         renderCustomHeader={({
           date,

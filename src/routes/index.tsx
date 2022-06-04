@@ -11,8 +11,7 @@ import NewSchedule from './NewSchedule'
 import styles from './routes.module.scss'
 
 const App = () => {
-  // const isLoggedIn = useRecoilValue(isLoggedState)
-  const isLoggedIn = true
+  const isLoggedIn = useRecoilValue(isLoggedState)
 
   return (
     <div className={styles.app}>
