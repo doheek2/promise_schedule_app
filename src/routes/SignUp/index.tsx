@@ -18,7 +18,7 @@ const SignUp = () => {
     e.preventDefault()
     createUserWithEmailAndPassword(auth, email, password)
       .then(() => {
-        navigate('/login')
+        navigate('/successSignUp')
       })
       .catch((error) => {
         // eslint-disable-next-line no-console

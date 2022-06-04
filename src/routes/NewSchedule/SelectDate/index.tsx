@@ -30,7 +30,6 @@ const SelectDate = ({ setDate }: IProps) => {
         disabledKeyboardNavigation
         onChangeRaw={inputReadOnlyHandler}
         onChange={dateChangeHandler}
-        // onChange={(date: Date | null) => setStartDate(date)}
         customInput={<input type='text' className={styles.datePickerInput} />}
         renderCustomHeader={({
           date,
