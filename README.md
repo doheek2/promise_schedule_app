@@ -1,6 +1,6 @@
 # 📅 약속 일정 APP
 
-![사진1](https://user-images.githubusercontent.com/97458345/172025650-cb379de2-6af7-4e22-8006-4bd39aa1db0e.jpg)
+![사진1](https://user-images.githubusercontent.com/97458345/172038899-d14a3d40-3f51-42f1-b37a-3e1ff35ac3f6.jpg)
 
 - **배포 URL** <br/> https://promise-schedule-app.netlify.app
 
@@ -184,7 +184,7 @@ createUserWithEmailAndPassword(auth, email, password)
 
 ## 2. 메인 페이지 및 '약속 일정 생성' 페이지
 
-![사진1](https://user-images.githubusercontent.com/97458345/172025650-cb379de2-6af7-4e22-8006-4bd39aa1db0e.jpg)
+![사진1](https://user-images.githubusercontent.com/97458345/172038899-d14a3d40-3f51-42f1-b37a-3e1ff35ac3f6.jpg)
 
 ### - 메인 페이지
 <details>
