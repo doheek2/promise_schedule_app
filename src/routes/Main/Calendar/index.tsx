@@ -158,11 +158,11 @@ const Calendar = ({ userData }: IUserData) => {
     <section className={styles.calendarWrapper}>
       <div>
         <div className={styles.title}>
-          <button type='button' onClick={prevMonth}>
+          <button type='button' className={styles.prevBtn} onClick={prevMonth}>
             <MdArrowBackIos />
           </button>
           <h3>
-            {yearControl()}년 {monthControl()}월
+            {yearControl()}. {monthControl()}
           </h3>
           <button type='button' className={styles.nextBtn} onClick={nextMonth}>
             <MdArrowForwardIos />

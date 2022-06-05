@@ -9,20 +9,25 @@ interface IProps {
 const SelectList = ({ selectData }: IProps) => {
   return (
     <div className={styles.selectDataWrapper}>
-      {selectData.map((v, i) => {
-        const key = `schedule${i}`
-        return (
-          <div key={key} className={styles.selectData} style={{ backgroundColor: v.labelColor }}>
-            <div className={styles.data}>
-              <p className={styles.scheduleNm}>{v.scheduleNm}</p>
-              <p className={styles.placeNm}>
-                <HiLocationMarker />
-                {v.placeNm}
-              </p>
+      <h3>Schedule</h3>
+      <div className={styles.datasWrapper}>
+        {selectData.map((v, i) => {
+          const key = `schedule${i}`
+          return (
+            <div key={key} className={styles.selectData}>
+              <div className={styles.data}>
+                <p className={styles.scheduleNm} style={{ backgroundColor: v.labelColor }}>
+                  {v.scheduleNm}
+                </p>
+                <p className={styles.placeNm}>
+                  <HiLocationMarker />
+                  {v.placeNm}
+                </p>
+              </div>
             </div>
-          </div>
-        )
-      })}
+          )
+        })}
+      </div>
     </div>
   )
 }

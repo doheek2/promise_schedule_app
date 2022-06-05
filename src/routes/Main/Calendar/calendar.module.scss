@@ -3,53 +3,94 @@
 .calendarWrapper {
   position: relative;
   width: 280px;
-  height: 400px;
+  height: auto;
+  // background-color: colors.$GREEN5;
+  border: 1px solid colors.$GRAY5;
+  border-radius: 20px;
 
   .title {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    color: colors.$GREEN4;
 
     .yearSelect {
       width: 45px;
+      margin-top: 20px;
     }
 
     select {
+      font-size: 20px;
+      font-weight: 600;
+      color: colors.$GREEN4;
       text-align-last: center;
       border: 0 none;
       -webkit--appearance: none;
       -moz-appearance: none;
       appearance: none;
+
+      option {
+        font-size: 15px;
+        color: colors.$BLACK;
+      }
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      margin-top: 20px;
+      background-color: colors.$GREEN3;
+      border-radius: 50%;
+
+      svg {
+        color: colors.$GREEN1;
+      }
+    }
+
+    .prevBtn {
+      margin-right: 15px;
+
+      svg {
+        margin-left: 4px;
+      }
     }
 
     .nextBtn {
-      margin-left: 10px;
+      margin-left: 15px;
     }
   }
 
   .week {
     display: flex;
     justify-content: space-evenly;
-    width: 280px;
+    width: 260px;
     margin-top: 20px;
-    font-size: 15px;
-    color: colors.$GRAY2;
+    margin-left: 10px;
+    font-size: 14px;
+    color: colors.$GREEN1;
   }
 
   .date {
-    margin-top: 20px;
+    display: inline-block;
+    width: 260px;
+    margin-top: 10px;
+    margin-left: 10px;
 
     .weekday {
       display: flex;
       align-items: center;
       justify-content: center;
       float: left;
-      width: 40px;
-      height: 40px;
-      margin-bottom: 10px;
+      width: 37.1px;
+      height: 39px;
+      margin-bottom: 2px;
       font-size: 17px;
       line-height: 50px;
-      color: colors.$GRAY3;
+      color: colors.$GRAY2;
     }
 
     .sunday {
@@ -63,9 +104,8 @@
     }
 
     .clickedDate {
-      background-color: colors.$GRAY1;
+      background-color: colors.$GREEN6;
       border-radius: 50%;
-      opacity: 0.5;
     }
   }
 }
